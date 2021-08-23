@@ -299,7 +299,7 @@ void boostControl()
 
 void vvtControl()
 {
-  if( (configPage6.vvtEnabled == 1) && (currentStatus.coolant >= configPage2.aeColdTaperMax) && (BIT_CHECK(currentStatus.engine, BIT_ENGINE_RUN)) )
+  if( (configPage6.vvtEnabled == 1) && (currentStatus.coolant >= configPage2.aeColdTaperMax - CALIBRATION_TEMPERATURE_OFFSET) && (BIT_CHECK(currentStatus.engine, BIT_ENGINE_RUN)) )
   {
     //currentStatus.vvt1Duty = 0;
     //Calculate the current cam angle
