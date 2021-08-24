@@ -304,7 +304,7 @@ void vvtControl()
   if( (configPage6.vvtEnabled == 1) && (currentStatus.coolant >= (int)(configPage4.vvtMinClt - CALIBRATION_TEMPERATURE_OFFSET)) && (BIT_CHECK(currentStatus.engine, BIT_ENGINE_RUN)) )
   {
     if ( vvtStart == 0 ) { vvtStart = runSecsX10; }
-    if ((runSecsX10 - vvtStart) > configPage4.vvtDelay * 5) 
+    if ((runSecsX10 - vvtStart) > (configPage4.vvtDelay * 5)) 
     {
       
       //currentStatus.vvt1Duty = 0;
